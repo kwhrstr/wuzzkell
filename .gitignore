@@ -1,2 +1,12 @@
 .stack-work/
+.idea/
+*.iml
 *~
+.DS_Store
+.idea/.gitignore
+.idea/codeStyles/
+.idea/libraries/
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+wuzzkell.iml
