@@ -21,7 +21,7 @@ runApp = do
   let st = initBrickState & set stAppEventChan (Just chan)  
   void $ customMain initialVty buildVty (st ^. stAppEventChan) app st
   where
-    opts = info (parseConfPath <|> pure "" <**> version Meta.version <**> helper)
+    opts = info (parseConfPath  <**> version Meta.version <**> helper)
          $ fullDesc
         <> progDesc "Print a greeting for TARGET"
         <> header "hello - a test for optparse-applicative"
@@ -49,5 +49,6 @@ parseConfPath = strOption
   <> metavar "FilePath"
   <> showDefault
   <> help "append config from path"
+  <> value ""
   )
 
